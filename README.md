@@ -1,5 +1,7 @@
 # 🛡️ Rey Optimizer
 
+![Rey Optimizer](assets/rey-optimizer-banner.png)
+
 Painel desktop em Python para diagnóstico, monitoramento e manutenção cuidadosa do Windows, com tema roxo.
 
 > **Estado:** protótipo funcional em desenvolvimento. Teste primeiro em uma máquina virtual.
@@ -12,6 +14,20 @@ Painel desktop em Python para diagnóstico, monitoramento e manutenção cuidado
 - Ações de manutenção explícitas: TEMP, DNS e ponto de restauração.
 - Monitoramento de processos e métricas com `psutil`.
 - Logs diários e interface em threads para não travar a UI.
+- Logo e ícone oficiais incluídos em `assets/rey-optimizer-logo.png` e `assets/rey-optimizer.ico`.
+
+## Executável pronto pelo GitHub Actions
+
+Cada push na branch `main` executa o workflow **Build Rey Optimizer Windows** em um runner Windows. O workflow valida o código, gera `Rey Optimizer.exe` com manifesto UAC e ícone, e publica o executável e um ZIP na aba **Actions > Artifacts**.
+
+Para criar uma release pública, use uma tag:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Nesse caso, o workflow também cria uma GitHub Release com os arquivos anexados.
 
 ## Requisitos e instalação
 

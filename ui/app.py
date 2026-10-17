@@ -18,6 +18,10 @@ class ReyOptimizerApp:
         ctk.set_appearance_mode("dark") if hasattr(ctk,"set_appearance_mode") else None
         ctk.set_default_color_theme("dark-blue") if hasattr(ctk,"set_default_color_theme") else None
         self.root=ctk.CTk() if hasattr(ctk,"CTk") else ctk.Tk(); self.root.title("Rey Optimizer"); self.root.geometry("1280x800"); self.root.configure(bg=BG)
+        icon=Path(__file__).resolve().parent.parent / "assets" / "rey-optimizer.ico"
+        if icon.exists():
+            try: self.root.iconbitmap(str(icon))
+            except Exception: pass
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.build(); self.show_dashboard(); self.refresh_metrics(); self.refresh_apps()
     def button(self, parent, text, command): return ctk.CTkButton(parent,text=text,command=command,fg_color=ACCENT,hover_color="#7c3aed")
