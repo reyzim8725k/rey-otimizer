@@ -9,8 +9,10 @@ Painel desktop em Python para diagnóstico, monitoramento e manutenção cuidado
 ## Recursos
 
 - Dashboard com CPU, RAM, disco, sistema e uptime.
+- Monitoramento com cartões de uso e gráficos em tempo real para CPU, RAM, disco e rede.
 - Scanner de aplicativos do Registro e Microsoft Store.
 - Desinstalação em lote usando os desinstaladores oficiais, com confirmação e lista protegida.
+- Lista visual de aplicativos com logo, versão, editor e tamanho estimado.
 - Ações de manutenção explícitas: TEMP, DNS e ponto de restauração.
 - Monitoramento de processos e métricas com `psutil`.
 - Logs diários e interface em threads para não travar a UI.
